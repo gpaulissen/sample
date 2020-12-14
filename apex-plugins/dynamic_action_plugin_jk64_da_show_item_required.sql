@@ -48,6 +48,7 @@ wwv_flow_api.create_plugin(
 '  l_result.javascript_function := replace(q''[function() {',
 '',
 '    $.each(this.affectedElements, (i, element) => {',
+'      element = element.parentElement.querySelector("input");',
 '      apex.debug("show as required",$(element).attr("id"));',
 '      var container = $(element).closest(".t-Form-fieldContainer");',
 '      container.addClass("is-required");',
